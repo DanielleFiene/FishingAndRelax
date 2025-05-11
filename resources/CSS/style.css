@@ -18,7 +18,7 @@
     --text-color-light: hsl(30, 20%, 40%); /* Darker brownish-gray for secondary text to increase legibility */
 
     --border-color: hsl(160, 30%, 80%); /* Soft greenish hue for borders, complementing the nature theme */
-    --body-color: hsl(30, 20%, 90%); /* Very light, calming green for background */
+    --body-color: hsl(30, 20%, 90%); 
     --container-color: hsl(160, 30%, 92%); /* Slightly darker greenish tan for containers */
 
 
