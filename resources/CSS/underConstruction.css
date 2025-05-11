@@ -6,7 +6,7 @@
 :root {
     --header-height: 3.5rem;
 
-    --first-color: hsl(160, 50%, 50%); /* Verdant green for a calm, nature-inspired feel */
+    --first-color: hsl(30, 20%, 20%); /* Verdant green for a calm, nature-inspired feel */
     --first-color-alt: hsl(160, 40%, 40%); /* Darker green for accents and contrast */
     --first-color-light: hsl(160, 50%, 70%); /* Light green for softer backgrounds */
     --first-color-lighten: hsl(160, 100%, 90%); /* Very light green for subtle accents */
@@ -202,7 +202,8 @@ button {
 /* Styling for nav links */
 .nav__link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
 }
 
 /* Active link */
@@ -251,7 +252,7 @@ button {
     z-index: 10;
     text-align: center;
 }
-
+/*==============================image==============================*/
 .construction-img {
     position: relative;
     display: block;
