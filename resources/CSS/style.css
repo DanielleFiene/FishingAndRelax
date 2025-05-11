@@ -6,10 +6,10 @@
 :root {
     --header-height: 3.5rem;
 
-    --first-color: hsl(30, 20%, 20%); /* Verdant green for a calm, nature-inspired feel */
-    --first-color-alt: hsl(160, 40%, 40%); /* Darker green for accents and contrast */
-    --first-color-light: hsl(160, 50%, 70%); /* Light green for softer backgrounds */
-    --first-color-lighten: hsl(160, 100%, 90%); /* Very light green for subtle accents */
+    --first-color: hsl(30, 20%, 25%); 
+    --first-color-alt: hsl(25, 40%, 20%);
+    --first-color-light: hsl(35, 50%, 70%);
+    --first-color-lighten: hsl(35, 50%, 90%); 
 
     --second-color: hsl(200, 80%, 40%); /* Deep blue for water elements, giving a fresh, calming touch */
 
@@ -18,7 +18,7 @@
     --text-color-light: hsl(30, 20%, 40%); /* Darker brownish-gray for secondary text to increase legibility */
 
     --border-color: hsl(160, 30%, 80%); /* Soft greenish hue for borders, complementing the nature theme */
-    --body-color: hsl(160, 10%, 90%); /* Very light, calming green for background */
+    --body-color: hsl(30, 20%, 90%); /* Very light, calming green for background */
     --container-color: hsl(160, 30%, 92%); /* Slightly darker greenish tan for containers */
 
 
@@ -96,14 +96,28 @@ ul {
 }
 
 a {
+  position: relative;
   text-decoration: none;
   transition: .3s;
   color: var(--first-color);
 }
 
+a::after {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 0%; 
+  height: 2px; 
+  background-color: var(--text-color);
+  transition: width 0.3s ease; 
+}
+
 a:hover {
-  text-decoration: underline;
-  color: var(--first-color-alt);
+}
+
+a:hover::after {
+  width: 100%; 
 }
 
 img {
@@ -284,7 +298,6 @@ button {
 }
 
 .footer a:hover {
-    text-decoration: underline;
 }
 
 /* Footer Company Info */
