@@ -33,7 +33,7 @@ function updateCountdown() {
 
     countdownEl.innerHTML =
         `Website live on: ${launchDateString}<br>
-        Another ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        Another ${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`;
 }
 
 updateCountdown();
