@@ -11,71 +11,55 @@
     <link rel="apple-touch-icon" sizes="180x180" href="">
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
-    <link rel="manifest" href="./resources/Images/site.webmanifest">
     <link href="./resources/CSS/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./resources/CSS/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/56e9e1144f.js" crossorigin="anonymous"></script>
     <title>FishingAndRelax.cz | Fishing & Nature Retreats in the Czech Republic</title>
 </head>
 
 <body class="">
     <main>
-    <!--header section-->
+<!-- header section -->
 <header class="header" id="header">
-    <nav class="nav container">
-        <div class="nav__left">
-            <div class="nav__text">
-                <a href="" class="nav__link active-link">
-                    <span>FishingAndRelax.cz</span>
-                </a>
-            </div>
-        </div>
+  <nav class="nav container">
+    <!-- Logo -->
+    <div class="nav__left">
+      <a href="" class="nav__link logo-link">
+        <span>FishingAndRelax.cz</span>
+      </a>
+    </div>
 
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        <span>Fishing</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        <span>Relaxing</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        <span>Prices & Terms</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <!-- Navigation menu -->
+    <div class="nav__center">
+      <!-- Hamburger Icon for mobile -->
+      <div class="nav__hamburger" id="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </div>
 
-        <!-- Verplaats de nav__flags hier naar buiten van de nav__menu -->
-        <div class="nav__flags">
-            <a href="./en/index.html" class="lang-option" hreflang="en" data-lang="en" title="English">
-                <img src="./resources/Images/Flag_of_the_United_Kingdom.svg.webp" alt="English">
-            </a>
-            <a href="./cz/index.html" class="lang-option" hreflang="cz" data-lang="cz" title="Čeština">
-                <img src="./resources/Images/Flag_of_the_Czech_Republic.svg.png" alt="Czech">
-            </a>
-            <a href="./de/index.html" class="lang-option" hreflang="de" data-lang="de" title="Deutsch">
-                <img src="./resources/Images/Flag_of_Germany.svg.png" alt="German">
-            </a>
-            <a href="./pl/index.html" class="lang-option" hreflang="pl" data-lang="pl" title="Polski">
-                <img src="./resources/Images/Flag_of_Poland.svg.png" alt="Polish">
-            </a>
-            <a href="./nl/index.html" class="lang-option" hreflang="nl" data-lang="nl" title="Nederlands">
-                <img src="./resources/Images/Flag_of_the_Netherlands.svg.webp" alt="Nederlands">
-            </a>
-        </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="nav__link">Fishing</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Relaxing</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Prices & Terms</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
 
-    </nav>
+    <!-- Language flags -->
+    <div class="nav__right">
+      <div class="nav__flags">
+        <a href="./en/index.html" class="lang-option"><img src="./resources/Images/Flag_of_the_United_Kingdom.svg.webp" alt="English"></a>
+        <a href="./cz/index.html" class="lang-option"><img src="./resources/Images/Flag_of_the_Czech_Republic.svg.png" alt="Czech"></a>
+        <a href="./de/index.html" class="lang-option"><img src="./resources/Images/Flag_of_Germany.svg.png" alt="German"></a>
+        <a href="./pl/index.html" class="lang-option"><img src="./resources/Images/Flag_of_Poland.svg.png" alt="Polish"></a>
+        <a href="./nl/index.html" class="lang-option"><img src="./resources/Images/Flag_of_the_Netherlands.svg.webp" alt="Nederlands"></a>
+      </div>
+    </div>
+  </nav>
 </header>
+
+
 
 
 <div class="container">
@@ -96,6 +80,7 @@
     </div>
 </div>
 <script src="./resources/JS/countdown.js"></script>
+<script src="./resources/JS/hamburger.js"></script>
 
 </body>
 </html>

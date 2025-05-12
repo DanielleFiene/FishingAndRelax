@@ -134,10 +134,11 @@ button {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 100%;
+  max-width: 1600px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+
 
 .grid {
   display: grid;
@@ -167,105 +168,252 @@ button {
 }
 
 /*=============== HEADER & NAV ===============*/
-/* Navbar container */
-.nav {
+
+nav.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Vertically centers items in the navbar */
-  padding: 30px;
-  position: relative; /* Ensures that the menu is positioned correctly */
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--body-color);
+  padding: 30px 0;
+  position: relative;
 }
 
-/* Styling for logo */
-.nav__logo .logo {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
-  border-radius: 5px;
+/* Nieuwe wrappers voor betere positionering */
+.nav__left,
+.nav__center,
+.nav__right {
+  display: flex;
+  align-items: center;
 }
 
-/* Styling for text next to the logo */
-.nav__text span {
+/* Center de navigatie-items */
+.nav__center {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Logo link */
+.nav__left .logo-link {
+  font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
 }
 
-/* Styling for the navigation menu */
+/* Menu styling */
 .nav__menu {
   display: flex;
   align-items: center;
-  list-style: none;
-  margin: auto;
-  padding: 0;
-  position: relative;
   justify-content: center;
 }
 
 .nav__list {
   display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  gap: 30px;
 }
 
-/* Styling for nav items */
-.nav__item {
-  margin-left: 20px;
-}
-
-/* Styling for nav links */
-.nav__link {
+.nav__item .nav__link {
   text-decoration: none;
-  font-size: var(--normal-font-size);
   font-weight: 600;
 }
 
-/* Active link */
-.nav__link.active-link {
-  border-radius: 5px;
-  font-weight: bold;
-  color: var(--first-color-alt);
+/* Vlaggen rechts */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Language flags container */
+/* Flags container */
 .nav__flags {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.nav__flags .lang-option {
-  display: inline-block;
-  margin-left: 10px; /* Space between flags */
+  gap: 10px;
 }
 
 .nav__flags .lang-option img {
-  width: 22px; /* Size of the flag icon */
+  width: 22px;
   height: 22px;
+  border-radius: 50%;
+  border: 1.2px solid #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  border: 1.3px solid #333;
-  border-radius: 75%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .nav__flags .lang-option:hover img {
-  transform: scale(1.1); /* Slightly enlarge the flag on hover */
+  transform: scale(1.1);
 }
 
-/*==============================Countdown timer dingetje==============================*/
-.countdown-overlay {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px 40px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    z-index: 10;
-    text-align: center;
+/* Hamburger Icon */
+.nav__hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
+
+/* ========== RESPONSIVE MENU ========== */
+@media screen and (max-width: 768px) {
+  nav.container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__center {
+    width: 100%;
+    order: 2;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav__menu.open {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav__right {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .nav__hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+
+
+
+/*=============== HAMBURGER MENU ===============*/
+
+/* Hide the regular menu on small screens by default */
+.nav__menu {
+  display: flex;
+}
+
+/* Hide the regular menu on small screens */
+.nav__hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Hamburger bars style */
+.nav__hamburger div {
+  width: 100%;
+  height: 5px;
+  background-color: var(--first-color);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu styling when active */
+.nav__menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* Add a slight animation for the items when the menu is open */
+.nav__menu.open .nav__item {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Style the links inside the mobile menu */
+.nav__menu.open .nav__link {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* ================== Media query for small screens ================== */
+@media screen and (max-width: 768px) {
+  /* Hide the regular nav menu */
+  .nav__menu {
+    display: none;
+  }
+
+  /* Show the hamburger icon on small screens */
+  .nav__hamburger {
+    display: block;
+  }
+
+  /* When the menu is open, show it */
+  .nav__menu.open {
+    display: flex;
+  }
+
+  .nav__flags {
+    margin-left: 0; /* Remove margin for flags on small screens */
+    margin-top: 10px; /* Adds spacing for better layout */
+  }
+}
+
+/* Countdown timer overlay */
+.countdown-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  z-index: 10;
+  text-align: center;
+  max-width: 90%;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .countdown-overlay {
+    top: 55%;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-overlay {
+    top: 35%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 80%;
+  }
+}
+
 /*==============================image==============================*/
 .construction-img {
     position: relative;
