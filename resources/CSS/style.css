@@ -19,7 +19,8 @@
 
     --border-color: hsl(160, 30%, 80%); /* Soft greenish hue for borders, complementing the nature theme */
     --body-color: hsl(30, 20%, 90%); 
-    --container-color: hsl(160, 30%, 92%); /* Slightly darker greenish tan for containers */
+    --container-color1: hsl(150, 10%, 75%);
+    --container-color2: hsl(60, 20%, 70%);
 
 
   
@@ -439,8 +440,8 @@ nav.container {
 
 /*===================================== viking grapjes =================================*/
 
-.kaart {
-  background: var(--container-color);
+.kaart1 {
+  background: var(--container-color1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 900px;
@@ -448,7 +449,66 @@ nav.container {
   padding: 2rem;
 }
 
-.kaart h2 {
+.kaart1 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.foto-rij {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.foto-rij img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 250px;
+}
+
+.foto-rij > div {
+  flex: 1;
+}
+
+.tekstblok {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.knop-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-knop {
+  display: inline-block;
+  background-color: #2c7a7b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-knop:hover {
+  background-color: #225e60;
+}
+
+.kaart2 {
+  background: var(--container-color2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.kaart2 h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
