@@ -638,7 +638,7 @@ nav.container {
 
 .homepage__card-button:hover {
     background-color: var(--first-color);
-    color: var(--body-color);
+    color: var(--first-color-light) !important;
     text-decoration: none;
 }
 
@@ -646,6 +646,24 @@ nav.container {
     margin-right: 10px;
     font-size: 1.5rem;
 }
+
+#cardbutton {
+  color: var(--first-color) !important;
+}
+
+
+#iconhome {
+  color: var(--first-color) !important;
+}
+
+#cardbutton:hover {
+  color: var(--first-color-light) !important;
+}
+
+#cardbutton:hover #iconhome {
+  color: var(--first-color-light) !important;
+}
+
 
 /* Responsive styling - Tablets (max 1024px) */
 @media screen and (max-width: 1024px) {
