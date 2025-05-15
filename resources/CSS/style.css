@@ -788,10 +788,6 @@ nav.container {
     letter-spacing: 0.15em !important;
 }
 
-h2 span {
-    position: relative;
-}
-
 .underline-name {
     border-bottom: 2px solid #1b5c4b;
 }
