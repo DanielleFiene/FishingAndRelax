@@ -754,11 +754,14 @@ nav.container {
 }
 
 /*============================Visitekaartje dingetje================*/
-
+.contact__title {
+  text-align: center; /* Center the title */
+  margin-top: 4rem; /* Space between the title and the grid */
+}
 .contact {
     display: flex;
     justify-content: center; /* Centers horizontally */
-    margin-top: 5%;
+    margin-top: 2rem;
     height: 100vh; /* Full viewport height */
 }
 
@@ -821,7 +824,7 @@ h2 span {
     margin-top: 0.5rem; /* Adds spacing above the contact details */
 }
 
-.contact p, a, i {
+.contact p, a {
     font-size: var(--small-font-size);
     color: #1b5c4b !important;
     line-height: 1.7rem;
