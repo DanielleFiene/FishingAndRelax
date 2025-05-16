@@ -401,7 +401,7 @@ nav.container {
 /* ================ Hero Section Styles ==================== */
 .hero {
   position: relative;
-  background-image: url('../resources/Images/Overzicht1.webp');
+  background-image: url('./Overzicht1.webp');
   background-size: cover;
   height: 900px; 
   display: flex;
