@@ -528,271 +528,106 @@ nav.container {
         margin-top: 1.5rem;
     }
 }
-/*==================================nieuwskaarten=================================*/
-.kaart {
-  background: var(--container-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
+
+/* =================== Nieuws Styling =================== */
+.news-items {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.kaart h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+.news-items__intro {
+    margin-bottom: 3rem;
 }
 
-.foto-rij {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+.news-items__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.foto-rij img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  height: 250px;
-}
-
-.foto-rij > div {
-  flex: 1;
-}
-
-.tekstblok {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.knop-container {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.homepage__card-button {
-    display: flex;
-    align-items: center;
-    font-size: var(--small-font-size);
-    padding: 14px 20px;
-    border: 3px solid var(--first-color);
-    border-radius: .25rem;
-    background: var(--first-color-light);
-    color: var(--first-color-alt);
-    font-weight: var(--font-semi-bold);
-    transition: all .3s ease;
-    justify-content: center;
-    align-self: center;
-    margin-top: auto;
-    width: 70%;
+.news-items__description {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
     margin: 0 auto;
 }
 
-.homepage__card-button:hover {
-    background-color: var(--first-color);
-    color: var(--first-color-light) !important;
-    text-decoration: none;
+.news-item {
+  background-color: var(--container-color1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.homepage__card-button i {
-    margin-right: 10px;
-    font-size: 1.5rem;
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-#cardbutton {
-  color: var(--first-color) !important;
+.news-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-
-#iconhome {
-  color: var(--first-color) !important;
+.news-item-title {
+  font-family: var(--heading-font2);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
 }
 
-#cardbutton:hover {
-  color: var(--first-color-light) !important;
+.news-item-date {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
 }
 
-#cardbutton:hover #iconhome {
-  color: var(--first-color-light) !important;
+.news-item-description {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  flex-grow: 1;
+  margin-bottom: 1rem;
 }
 
-
-
-/*============================Visitekaartje dingetje================*/
-.contact__title {
-  text-align: center; /* Center the title */
-  margin-top: 4rem; /* Space between the title and the grid */
-}
-.contact {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    margin-top: 2rem;
-    height: 100vh; /* Full viewport height */
+/* =================== Disclaimer Styling =================== */
+.disclaimer {
+  padding: 1.5rem 1rem;
 }
 
-.contact h2,h4 {
-    color: #1b5c4b !important;
-    margin-bottom: 1rem;
-    letter-spacing: 0.15em !important;
+.disclaimer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.underline-name {
-    border-bottom: 2px solid #1b5c4b;
+.disclaimer__text {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-style: italic;
 }
 
-.contact-box {
-    background-color: #fcf6e9;
-    display: flex;
-    flex-direction: column; /* logo bovenaan, inhoud eronder */
-    align-items: center;
-    height: 400px;
-    width: 50%;
-    text-align: center;
-    border-radius: 2px;
-    box-shadow: 15px 30px 10px rgba(0, 0, 0, 0.8);
-    border: 2px solid #1b5c4b;
-}
-
-.contact-box img {
-    margin-top: 3%;
-    width: 300px;
-    margin-bottom: 15px;
-}
-
-/* Nieuw: wrapper voor de twee personen naast elkaar */
-.person-cards-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px; /* optioneel: ruimte aan de zijkanten */
-    box-sizing: border-box;
-}
-
-.person-card {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-    text-align: center; /* naam en contact links uitlijnen */
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns text to the left */
-    margin-top: 0.5rem; /* Adds spacing above the contact details */
-}
-
-.contact p, a {
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .disclaimer__text {
     font-size: var(--small-font-size);
-    color: #1b5c4b !important;
-    line-height: 1.7rem;
-    transition: color 0.3s ease-in-out;
-}
-
-.logo-icon {
-    color: #1b5c4b !important;
-    fill: #1b5c4b;
-    font-style: normal !important;
-    transition: color 0.3s ease-in-out;
-    margin-right: 15px;
-}
-
-.contact .fa-whatsapp {
-    font-size: 1.3rem;
-    margin-right: 13px;
-}
-
-.contact a {
-    color: #1b5c4b;
-    transition: color 0.3s ease-in-out;
-}
-
-.contact a:hover,
-.contact a:hover .logo-icon {
-    color: #0a2722 !important; 
-}
-
-
-/* =================== Responsive styles contact card =================== */
-
-/* Mobile Styles (up to 480px) */
-@media (max-width: 480px) {
-  .contact {
-      height: auto; /* Allow contact card to grow vertically */
-      margin-top: 20px; /* Add some margin at the top */
-      padding: 20px;
-  }
-
-  .contact-box {
-      width: 90%; /* Make the contact box take more width on smaller screens */
-      height: auto; /* Allow it to adjust dynamically */
-  }
-
-  .person-cards-wrapper {
-      flex-direction: column; /* Stapel de kaarten onder elkaar */
-      align-items: center;    /* Center de kaarten horizontaal */
-  }
-
-  .person-card {
-      width: 100%; /* Neem volle breedte op mobiel */
-      margin: 1rem 0;
-      text-align: center; /* Centraal uitlijnen voor mobiel */
-  }
-
-  .contact-box img {
-      width: 120px; /* Reduce image size */
-  }
-
-  .contact p, a, i {
-      font-size: 0.9rem; /* Slightly reduce font size for small screens */
-  }
-
-  .contact h2, .contact h4 {
-      margin-bottom: 0.5rem; /* Slightly decrease space between headings */
+    padding: 0 1rem;
   }
 }
 
-/* Tablet Styles (from 481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .contact {
-      height: auto; /* Allow contact card to grow vertically */
-      margin-top: 20px; /* Add some margin at the top */
-      padding: 20px;
-  }
-
-  .contact-box {
-      width: 80%; 
-      height: auto;
-  }
-
-  .person-cards-wrapper {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .person-card {
-      width: 100%;
-      margin: 1rem 0;
-      text-align: center;
-  }
-
-  .contact-box img {
-      width: 130px; 
-  }
-
-  .contact-details {
-    margin-bottom: 25px;
-  }
-
-  .contact h2, .contact h4 {
-      margin-bottom: 1rem;
-  }
-}
 
 /*===================================== Footer Styling =================================*/
 .footer {
