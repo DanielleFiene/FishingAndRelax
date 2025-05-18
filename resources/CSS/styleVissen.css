@@ -560,6 +560,7 @@ nav.container {
 #viskaarten__locatie {
     margin-top: 2rem;
     background-color: var(--container-color2);
+    text-align: center;
 }
 /* ========================= visregel kaarten ==============================*/
 .viskaarten__cards {
@@ -588,7 +589,7 @@ nav.container {
 }
 
 .viskaarten__list {
-    list-style-type: none;
+    list-style-type: disc;
     padding-left: 1.25rem;
     margin-bottom: 1rem;
 }
