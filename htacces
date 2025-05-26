@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Forceer www en HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.fishingandrelax\.cz$ [NC]
+RewriteRule ^(.*)$ https://www.fishingandrelax.cz/$1 [R=301,L]
