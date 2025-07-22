@@ -721,7 +721,62 @@ nav.container {
   }
 }
 
+  /* ===================== Location Styles ====================== */
+.location {
+  padding: 2rem;
+}
 
+.location__title {
+  text-align: center; /* Center the title */
+  margin-bottom: 2rem; /* Space between the title and the grid */
+}
+
+.location__container {
+  display: grid;
+  gap: 2rem; /* Gap between columns */
+  max-width: 700px; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+}
+
+#location-card {
+  margin-top: -200rem;
+}
+
+.location__cards {
+  background-color: var(--container-color2);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.location__card-info {
+  margin-bottom: 1rem;
+}
+
+.location__card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.location__card-description {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+
+.location__cards iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+#google-maps-icon {
+  padding: 6px;
+  font-size: 1.4rem;
+  color: #DB4437;  
+}
 
 /*============================Visitekaartje dingetje================*/
 .contact__title {

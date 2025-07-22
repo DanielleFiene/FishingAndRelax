@@ -124,6 +124,9 @@ a.logo-link::after,
   display: none !important;
 }
 
+a:hover {
+}
+
 a:hover::after {
   width: 100%; 
 }
@@ -720,8 +723,6 @@ nav.container {
     padding: 10px 14px;
   }
 }
-
-
 
 /*============================Visitekaartje dingetje================*/
 .contact__title {
